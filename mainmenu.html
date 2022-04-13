@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainmenu.css">
+    <script src="mainmenu.js"></script>
+    <title>Lab 3</title>
+</head>
+<body>
+    <!-- Show the current classroom's details -->
+    <div id="classroomListMenu">
+        <h3>Current Classrooms</h3>
+        <ul id="classroomList">
+            <li id="A1Classroom">A1</li>
+            <li id="B1Classroom">B1</li>
+            <li id="C3Classroom">C3</li>
+        </ul>
+    </div>
+
+    <!-- Display the options as radio buttons, with a button at the bottom -->
+    <div id="mainMenuOptions">
+        <h3>Main Menu Options</h3>
+        <radiobuttons>
+            <label for="addClassroom">
+                <input type="radio" name="mainMenuRadios" id="addClassroomRadio" value="addClassroom" class="mainMenuRadio">
+                Add a Classroom
+            </label>
+
+            <label for="removeClassroom">
+                <input type="radio" name="mainMenuRadios" id="removeClassroomRadio" value="removeClassroom" class="mainMenuRadio">
+                Remove a Classroom
+            </label>
+
+            <label for="viewClassroom">
+                <input type="radio" name="mainMenuRadios" id="viewClassroomRadio" value="viewClassroom" class="mainMenuRadio">
+                View a Classroom's Details
+            </label>
+        </radiobuttons>
+
+        <button onclick="mainMenuOption()">Submit</button>
+    </div>
+
+    <!-- Accept user input to add classroom -->
+    <div id="addClassroomMenu" class="hiddenMenu">
+        <h3>Add A Classroom</h3>
+        <label for="classroomNameText">Classroom Name:<input type="text" name="classroomName" id="classroomNameText"></label>
+        <button onclick="addClassroom()">Add Classroom</button>
+    </div>
+
+    <!-- Show a combo box to allow the user to remove a classroom -->
+    <div id="removeClassroomMenu" class="hiddenMenu">
+        <h3>Remvoe A Classroom</h3>
+        <label for="removeClassroomList">
+            <select name="removeClassroomList" id="removeClassroomCombo">
+                <!-- This will eventually be populated by js, but is currently hardcoded -->
+                <option id="A1Dropdown">A1</option>
+                <option id="B1Dropdown">B1</option>
+                <option id="C3Dropdown">C3</option>
+            </select>
+        </label>
+        <button onclick="removeClassroom()">Remove Classroom</button>
+    </div>
+
+    <!-- Show a combo box to allow the user to view a classroom's detials -->
+    <div id="viewDetailsMenu" class="hiddenMenu">
+        <h3>View A Classroom's Details</h3>
+        <label for="classroomDetailsList">
+            <select name="classroomDetailsList" id="classroomDetailsCombo">
+                <option id="A1">A1</option>
+                <option id="B1">B1</option>
+                <option id="C3">C3</option>
+            </select>
+        </label>
+        <button onclick="viewClassroomDetails()">View Classroom</button>
+    </div>
+</body>
+</html>

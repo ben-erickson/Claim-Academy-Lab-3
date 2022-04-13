@@ -1,0 +1,15 @@
+.hiddenMenu 
+{
+    display: none;
+}
+
+#mainMenuOptions 
+{
+    display: block;
+}
+
+radiobuttons 
+{
+    display: inline-grid;
+    line-height: 1.5;
+}

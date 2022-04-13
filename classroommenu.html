@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="classroommenu.css">
+    <script src="classroommenu.js"></script>
+    <title>Classroom Menu</title>
+</head>
+<body>
+    <div id="informationMenu" class="visibleMenus">
+        <a href="mainmenu.html">Return to Main Menu</a>
+
+        <h3>Current Classroom:</h3>
+        <p id="currentClassroomLabel">Classroom not found</p>
+
+        <h4>Current Sudents:</h4>
+        <ul id="studentList">
+            <li>Christopher Laronne</li>
+            <li>Alfred Harold</li>
+        </ul> 
+    </div>
+
+    <div id="optionsMenu" class="visibleMenus">
+        <h3>Classroom Options:</h3>
+        <radiobuttons>
+            <label for="addStudentRadio">
+                <input type="radio" name="classroomRadios" id="addStudentRadio" value="addStudent">
+                Add Student
+            </label>
+            <label for="removeStudentRadio">
+                <input type="radio" name="classroomRadios" id="removeStudentRadio" value="removeStudent">
+                Remove Student
+            </label>
+            <label for="viewAverageRadio">
+                <input type="radio" name="classroomRadios" id="viewAverageRadio" value="viewAverage">
+                View Classroom Average
+            </label>
+            <label for="topBottomRadio">
+                <input type="radio" name="classroomRadios" id="topBottomRadio" value="topBotton">
+                View the Top and Bottom Students
+            </label>
+            <label for="editStudentRadio">
+                <input type="radio" name="classroomRadios" id="editStudentRadio" value="editStudent">
+                Edit Student
+            </label>
+        </radiobuttons>
+
+        <button onclick="classroomMenuOption()">Submit</button>
+    </div>
+
+    <div id="addStudentMenu" class="classroomMenus">
+        <label for="studentNameText">Student Name:<input type="text" name="addStudent" id="studentNameText"></label>
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div id="removeStudentMenu" class="classroomMenus">
+        <select>
+            <!-- This should be removed by javascript as the actual options are populated -->
+            <option>Christopher Laronne</option>
+            <option>Alfred Harold</option>
+        </select>
+        <button>Remove Student</button>
+    </div>
+
+    <div id="viewAverageMenu" class="classroomMenus">
+        <p>Class Average:</p>
+        <p id="classAverageGrade">Average not found</p>
+    </div>
+
+    <div id="topBottomMenu" class="classroomMenus">
+        <p>Top Student's Grade:</p>
+        <p id="topStudentName">Student not found</p>
+        <p id="topStudentGrade">Grade not found</p>
+
+        <p>Bottom Student's Grade:</p>
+        <p id="bottomStudentName">Student not found</p>
+        <p id="bottomStudentGrade">Grade not found</p>
+    </div>
+
+    <div id="editStudentMenu" class="classroomMenus">
+        <select id="editStudentDropdown">
+            <!-- This should be removed by javascript as the actual options are populated -->
+            <option id="placeholderOption">Placeholder</option>
+        </select>
+        <button onclick="viewStudentDetails()">Edit Student</button>
+    </div>
+</body>
+</html>

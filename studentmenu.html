@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studentmenu.css">
+    <script src="studentmenu.js"></script>
+    <title>Student Menu</title>
+</head>
+<body>
+    <div id="informationMenu" class="visibleStudentMenus">
+        <a href="classroommenu.html">Return to Classroom Menu</a>
+        <a href="mainmenu.html">Return to Main Menu</a>
+
+        <h3>Current Student:</h3>
+        <p id="studentNameLabel">Student Not Found</p>
+
+        <h4>Assignments:</h4>
+        <ul id="currentAssignments">
+            <li>American History Essay</li>
+            <li>C# Lab 3</li>
+        </ul>
+    </div>
+
+    <div id="optionsMenu" class="visibleStudentMenus">
+        <h3>Student Options: </h3>
+        <radiobuttons>
+            <label for="addAssignmentRadio">
+                <input type="radio" id="addAssignmentRadio" name="studentRadios" value="addAssignment">
+                Add Assignment
+            </label>
+            <label for="removeAssignmentRadio">
+                <input type="radio" id="removeAssignmentRadio" name="studentRadios" value="removeAssignment">
+                Remove Assignemnt    
+            </label>
+        </radiobuttons>
+
+        <button onclick="studentMenuOption()">Submit</button>
+    </div>
+
+    <div id="addAssignmentMenu" class="studentMenus">
+        <label for="addAssignmentText">Assignment Name: <input type="text" id="addAssignmentText" name="addAssignment"></label>
+        <button onclick="addAssignment()">Submit</button>
+    </div>
+
+    <div id="removeAssignmentMenu" class="studentMenus">
+        <select id="removeAssignmentDropdown">
+            <option>Assignments not found</option>
+        </select>
+        <button onclick="removeAssignment()">Submit</button>
+    </div>
+</body>
+</html>

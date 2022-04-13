@@ -1,0 +1,20 @@
+radiobuttons 
+{
+    display: inline-grid;
+    line-height: 1.5;
+}
+
+.studentMenus
+{
+    border-top: solid black 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.visibleStudentMenus
+{
+    border-top: solid black 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+}
